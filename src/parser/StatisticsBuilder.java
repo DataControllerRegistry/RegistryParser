@@ -18,15 +18,15 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.util.JSON;
 
-import models.AdvancedStatisticObject;
-import models.DataController;
-import models.GeneralStatistics;
-import models.NatureOfWorkObject;
-import models.NewFormat;
-import models.OtherPurpose;
-import models.Purpose;
-import models.RegistryListItem;
-import models.StatisticObject;
+import models.datacontroller.DataController;
+import models.datacontroller.NewFormat;
+import models.datacontroller.OtherPurpose;
+import models.datacontroller.Purpose;
+import models.stats.AdvancedStatisticObject;
+import models.stats.GeneralStatistics;
+import models.stats.NatureOfWorkObject;
+import models.stats.RegistryListItem;
+import models.stats.StatisticObject;
 
 /**
  * Class to add statistics from the created data controller registry
@@ -69,7 +69,7 @@ public class StatisticsBuilder {
 
 		// connect to db
 		dbURI = new MongoClientURI(
-				"mongodb://admin:incorrect@ds033629.mongolab.com:33629/data_controllers");
+				"mongodb://heroku_ff6ks7r0:8j31bc8ngb24btldtn48n3ltdm@ds145355.mlab.com:45355/heroku_ff6ks7r0");
 		client = new MongoClient(dbURI);
 
 		natureOfWorkMap = new HashMap<String, NatureOfWorkObject>();

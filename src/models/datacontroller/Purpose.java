@@ -1,4 +1,4 @@
-package models;
+package models.datacontroller;
 import java.util.ArrayList;
 
 public class Purpose {

@@ -1,4 +1,4 @@
-package models;
+package models.datacontroller;
 
 public class OtherPurpose {
 	private String purpose,statement;

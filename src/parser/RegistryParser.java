@@ -8,12 +8,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import models.NewFormat;
-import models.OtherPurpose;
-import models.Purpose;
-import models.DataController;
-
-
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -25,6 +19,11 @@ import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.util.JSON;
+
+import models.datacontroller.DataController;
+import models.datacontroller.NewFormat;
+import models.datacontroller.OtherPurpose;
+import models.datacontroller.Purpose;
 
 /**
  * 
@@ -72,8 +71,7 @@ public class RegistryParser extends DefaultHandler {
 	public RegistryParser() throws IOException {
 		gson = new Gson();
 		out = new PrintWriter(new BufferedWriter(new FileWriter("files/other/Errors.txt")));
-		String uri = new BufferedReader(new FileReader("files/other/connection.txt")).readLine();
-		dbURI = new MongoClientURI(uri);
+		dbURI = new MongoClientURI("mongodb://heroku_ff6ks7r0:8j31bc8ngb24btldtn48n3ltdm@ds145355.mlab.com:45355/heroku_ff6ks7r0");
 		client = new MongoClient(dbURI);
 		// client = new MongoClient("localhost",27017);
 		// database = client.getDB("dataControllers");

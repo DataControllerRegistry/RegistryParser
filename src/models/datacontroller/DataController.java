@@ -1,4 +1,4 @@
-package models;
+package models.datacontroller;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

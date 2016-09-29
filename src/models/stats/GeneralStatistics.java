@@ -1,4 +1,4 @@
-package models;
+package models.stats;
 
 public class GeneralStatistics {
 	private int recordCount, companiesHouseCount, addressCount, postcodeCount,
